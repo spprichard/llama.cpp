@@ -36,7 +36,7 @@ let package = Package(
                 "ggml-alloc.c",
                 "ggml-backend.c",
                 "ggml-quants.c",
-//                "ggml-metal.m",
+                "ggml-metal.m",
             ],
             resources: [
 //                .process("ggml-metal.metal")
@@ -44,10 +44,10 @@ let package = Package(
             publicHeadersPath: "spm-headers",
             cSettings: [
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
-//                .define("GGML_USE_ACCELERATE"),
                 .unsafeFlags(["-fno-objc-arc"]),
-//                .define("GGML_USE_METAL"),
-                .define("LLAMA_NO_METAL"),
+                .define("GGML_USE_ACCELERATE"),
+                .define("GGML_USE_METAL"),
+//                .define("LLAMA_NO_METAL"),
                 .define("LLAMA_SANITIZE_THREAD")
 
                 // NOTE: NEW_LAPACK will required iOS version 16.4+
