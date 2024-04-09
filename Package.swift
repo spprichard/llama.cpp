@@ -39,7 +39,7 @@ let package = Package(
 //                "ggml-metal.m",
             ],
             resources: [
-                .process("ggml-metal.metal")
+//                .process("ggml-metal.metal")
             ],
             publicHeadersPath: "spm-headers",
             cSettings: [
