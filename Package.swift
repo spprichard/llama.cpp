@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.10
 
 import PackageDescription
 
@@ -36,7 +36,7 @@ let package = Package(
                 "ggml-alloc.c",
                 "ggml-backend.c",
                 "ggml-quants.c",
-                "ggml-metal.m",
+//                "ggml-metal.m",
             ],
             resources: [
                 .process("ggml-metal.metal")
@@ -53,6 +53,7 @@ let package = Package(
                 // .define("ACCELERATE_NEW_LAPACK"),
                 // .define("ACCELERATE_LAPACK_ILP64")
             ],
+            swiftSettings: [.interoperabilityMode(.Cxx)],
             linkerSettings: [
                 .linkedFramework("Accelerate")
             ]
