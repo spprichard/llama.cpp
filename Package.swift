@@ -44,7 +44,7 @@ let package = Package(
             publicHeadersPath: "spm-headers",
             cSettings: [
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
-                .define("GGML_USE_ACCELERATE"),
+//                .define("GGML_USE_ACCELERATE"),
                 .unsafeFlags(["-fno-objc-arc"]),
 //                .define("GGML_USE_METAL"),
                 .define("LLAMA_NO_METAL"),
